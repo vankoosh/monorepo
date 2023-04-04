@@ -19,14 +19,15 @@ const FlexDiv = styled.div`
       return "space-around";
     }
   }}
-  flex-direction: ${({ direction }) =>
-    direction === "column" ? "column" : "row"};
-    
+  flex-direction: ${(direction) => (direction === "column" ? "column" : "row")};
+    gap: ${({ gap }) => {
+      return gap;
+    }}
 `;
 
-export const Flex = ({ children, direction, justifyContent }) => {
+export const Flex = ({ children, direction, justifyContent, gap }) => {
   return (
-    <FlexDiv direction={direction} justifyContent={justifyContent}>
+    <FlexDiv direction={direction} justifyContent={justifyContent} gap={gap}>
       {children}
     </FlexDiv>
   );

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "../ui/Flex";
+import { Flex } from "./ui/Flex";
 
 const styledContactCard = styled.div`
   width: 30vw;

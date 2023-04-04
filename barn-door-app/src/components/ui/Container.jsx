@@ -21,7 +21,7 @@ const styledWideDiv = styled.div`
   background-color: yellow;
 `;
 
-export function Full({ children }) {
+export const Full = ({ children }) => {
   return (
     <styledFullDiv>
       <Flex direction="column" justifyContent="flex-start">
@@ -29,9 +29,9 @@ export function Full({ children }) {
       </Flex>
     </styledFullDiv>
   );
-}
+};
 
-export function Wide({ children }) {
+export const Wide = ({ children }) => {
   return (
     <styledWideDiv>
       <Flex direction="column" justifyContent="flex-start">
@@ -39,4 +39,4 @@ export function Wide({ children }) {
       </Flex>
     </styledWideDiv>
   );
-}
+};

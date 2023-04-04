@@ -1,7 +1,9 @@
-import { Route, Routes } from "react-router-dom";
-import Landing from "../pages/Landing";
-import Systems from "../pages/Systems";
-import { Flex } from "../ui/Flex";
+import { Flex } from "./ui/Flex";
+import styled from "styled-components";
+
+const Navlink = ({ children, marginLeft }) => {
+  <div></div>;
+};
 
 export const Navbar = ({}) => {
   return (
@@ -11,10 +13,6 @@ export const Navbar = ({}) => {
         <span>Two</span>
         <span>Three</span>
       </Flex>
-      <Routes>
-        <Route to="../" element={<Landing />} />
-        <Route to="../systems" element={<Systems />} />
-      </Routes>
     </>
   );
 };

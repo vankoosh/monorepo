@@ -1,4 +1,4 @@
-import { Flex } from "../ui/Flex";
+import { Flex } from "./ui/Flex";
 
 export default function Footer() {
   return (
