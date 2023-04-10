@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /barn-door-app/node_modules
+/ts-test/node_modules
 /.pnp
 .pnp.js
 
@@ -11,6 +12,7 @@
 
 # production
 /barn-door-app/build
+/ts-test/build
 
 # misc
 .DS_Store
