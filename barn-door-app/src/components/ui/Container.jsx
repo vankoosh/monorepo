@@ -1,42 +1,38 @@
-import { Flex } from "./Flex";
-import styled from "styled-components";
+import React, { ReactNode } from "react";
 
-const styledFullDiv = styled.div`
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: auto;
-  position: relative;
-  outline: 1px solid black;
-  background-color: yellow;
-`;
+type ContainerProps = {
+  children: ReactNode;
+  height: string;
+};
 
-const styledWideDiv = styled.div`
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 80vw;
-  height: auto;
-  outline: 1px solid black;
-  background-color: yellow;
-`;
-
-export const Full = ({ children }) => {
+export const Full = ({ children, height }: ContainerProps) => {
   return (
-    <styledFullDiv>
-      <Flex direction="column" justifyContent="flex-start">
-        {children}
-      </Flex>
-    </styledFullDiv>
+    <div
+      style={{
+        margin: "0",
+        padding: "0",
+        width: "100vw",
+        height: height,
+        position: "relative",
+      }}
+    >
+      {children}
+    </div>
   );
 };
 
-export const Wide = ({ children }) => {
+export const Wide = ({ children, height }: ContainerProps) => {
   return (
-    <styledWideDiv>
-      <Flex direction="column" justifyContent="flex-start">
-        {children}
-      </Flex>
-    </styledWideDiv>
+    <div
+      style={{
+        margin: "0",
+        padding: "0",
+        position: "relative",
+        width: "80vw",
+        height: height,
+      }}
+    >
+      {children}
+    </div>
   );
 };

@@ -1,17 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 
 const theme = {
   color: "orange",
 };
-
-const styledHeroBackground = styled.div`
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  background-image: url("barn-door-hero.png");
-`;
 
 const styledHeroText = styled.div`
   postition: absolute;
@@ -24,12 +16,21 @@ const styledHeroText = styled.div`
 
 export default function Hero() {
   return (
-    <styledHeroBackground>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        position: "absolute",
+        top: "4rem",
+        left: "0",
+        backgroundImage: 'url("barn-door-hero.png")',
+      }}
+    >
       <styledHeroText>
         <p>MODERNE</p>
         <p>&nbsp;&nbsp;ELEGANTNE</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;NEPREHLIADNUTELNE</p>
       </styledHeroText>
-    </styledHeroBackground>
+    </div>
   );
 }

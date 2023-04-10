@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Flex } from "./ui/Flex";
+import Flex from "./ui/Flex";
+import React from "react";
 
 const styledContactCard = styled.div`
   width: 30vw;
@@ -9,13 +10,13 @@ const styledContactCard = styled.div`
 
 export default function Contact() {
   return (
-    <Flex justifyContent={"space-around"}>
-      <styledContactCard>
+    <Flex justify="space-around" width="80vw">
+      <div>
         <p>Telefon:</p>
-      </styledContactCard>
-      <styledContactCard>
+      </div>
+      <div>
         <p>Adresa:</p>
-      </styledContactCard>
+      </div>
     </Flex>
   );
 }

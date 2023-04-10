@@ -1,18 +1,14 @@
+import { Link } from "react-router-dom";
 import { Flex } from "./ui/Flex";
 import styled from "styled-components";
+import React from "react";
 
-const Navlink = ({ children, marginLeft }) => {
-  <div></div>;
-};
-
-export const Navbar = ({}) => {
+export const Navbar = React.memo(({}) => {
   return (
     <>
-      <Flex direction="column">
-        <span>One</span>
-        <span>Two</span>
-        <span>Three</span>
-      </Flex>
+      <Flex width="100vw"></Flex>
     </>
   );
-};
+});
+
+export default Navbar;

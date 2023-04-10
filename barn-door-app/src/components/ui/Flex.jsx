@@ -1,34 +1,41 @@
-import styled from "styled-components";
+import React, { ReactNode } from "react";
 
-const FlexDiv = styled.div`
-  display: flex;
-  justify-content: ${({ justifyContent }) => {
-    if (justifyContent === "flex-start") {
-      return "flex-start";
-    }
-    if (justifyContent === "center") {
-      return "center";
-    }
-    if (justifyContent === "flex-end") {
-      return "flex-end";
-    }
-    if (justifyContent === "space-between") {
-      return "space-between";
-    }
-    if (justifyContent === "space-around") {
-      return "space-around";
-    }
-  }}
-  flex-direction: ${(direction) => (direction === "column" ? "column" : "row")};
-    gap: ${({ gap }) => {
-      return gap;
-    }}
-`;
+export type FlexProps = {
+  children?: ReactNode;
+  direction?: "row" | "column";
+  justify?:
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-around"
+    | "space-between";
+  align?: "flex-start" | "flex-end" | "center";
+  gap?: string;
+  width: string;
+};
 
-export const Flex = ({ children, direction, justifyContent, gap }) => {
+export const Flex = ({
+  children,
+  direction = "row",
+  justify = "flex-start",
+  align = "flex-start",
+  gap,
+  width,
+}: FlexProps) => {
   return (
-    <FlexDiv direction={direction} justifyContent={justifyContent} gap={gap}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: direction,
+        justifyContent: justify,
+        alignItems: align,
+        gap: gap,
+        width: width,
+      }}
+    >
       {children}
-    </FlexDiv>
+    </div>
   );
 };
+
+export default Flex;
